@@ -1,0 +1,190 @@
+:root{
+  --color-texto-azul: #0A3871;
+  --color-texto-mensajes: #495057;
+  --color-texto-error: #343A40;
+  --color-fondo: #e5e5e5;
+  --color-texto-error: red;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--color-fondo);
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+}
+
+.wrapper{
+  margin: 0 auto;
+  width: 375px;
+  height: 100vh;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+}
+
+header{
+  height: 96px;
+  padding: 24px 0px;
+}
+
+.section1{
+  margin-top: 30px;
+  margin-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+}
+
+.input{
+  height: 60px;
+}
+
+.input input{
+  
+  background-color: var(--color-fondo);
+  border:none;
+  color: var(--color-texto-azul);
+  font-size: 32px;
+  line-height: 48px;
+}
+
+.input input:focus{
+  border: 1px solid var(--color-fondo);
+  outline: none;
+}
+
+.msg-informativo{
+  display: flex;
+  gap: 5px;
+  color: var(--color-texto-mensajes);
+  font-size: 12px;
+  line-height: 18px;
+}
+
+.section2{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.btn{
+  height: 67px;
+  width: 343px;
+  font-size: 16px;
+  line-height: 19px;
+  border-radius: 24px;
+  border: 1px solid var(--color-texto-azul);
+}
+
+#btn-encriptar{
+  background-color: var(--color-texto-azul);
+  color: #FFFFFF;
+}
+
+#btn-desencriptar{
+  background-color: var(--color-fondo);
+  color: var(--color-texto-azul);
+}
+
+.section3{
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  padding: 32px;
+  background: #FFFFFF;
+  box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
+  border-radius: 32px;
+}
+
+.mensaje-error{
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  line-height: 120%;
+  color: var(--color-texto-error);
+  margin: 16px 0px;
+  display:none;
+  color: var(--color-texto-error);
+}
+
+.cuerpo-mensaje{
+  font-size: 16px;
+  line-height: 150%;
+  text-align: center;
+  color: var(--color-texto-mensajes);
+  margin: 16px 0px;
+}
+
+.btn-copiar{
+  display: none;
+}
+
+.visible{
+  display: block;
+}
+
+#btn-copy{
+  width: 279px;
+  background: #FFFFFF;
+  color: var(--color-texto-azul);
+}
+
+@media screen and (min-width: 768px){
+    .wrapper{
+      width: 768px;
+    }
+
+    .section2{
+      flex-direction: row;
+      justify-content: center;
+    }
+    .input input{
+      width: 100%;
+    }
+
+    .btn-copiar{
+      align-self: center;
+    }
+    
+}
+
+@media screen and (min-width: 1200px) {
+  .wrapper{
+    width: 80%;
+    max-width: 1440px;
+    display: grid;
+    grid-template-areas: 'header header mensaje'
+    'input input mensaje'
+    'botones botones mensaje';
+    gap: 20px;
+  }
+
+  header{
+    grid-area: header;
+  }
+
+  .section1{
+    grid-area: input;
+  }
+
+  .section2{
+    grid-area: botones;
+  }
+
+  .section3{
+    width: 400px;
+    max-width: 400px;
+    grid-area: mensaje;
+    justify-content: space-between; 
+  }
+  
+}
+
+
+
+
+

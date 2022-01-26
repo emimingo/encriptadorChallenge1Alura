@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com"> 
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <title>Encriptador</title>
+</head>
+<body>
+  <div class="wrapper">
+    <header>
+      <h1 class="logo">
+        <a href="">
+          <img src="./img/logo.svg" alt="Alura">
+        </a>
+      </h1>
+    </header>
+      <section class="section1">
+        <div class="input">
+          <input type="text" name="input-texto" id="input-texto" placeholder="Ingrese el texto aqui">
+        </div>
+        <div class="msg-informativo">
+          <img src="./img/info.svg" alt="info-icon">
+          <span>Solo letras minúsuclas y sin acentos</span>
+        </div>
+      </section>
+
+      <section class="section2">
+        <div class="enctriptar">
+          <button class="btn" id="btn-encriptar">Encriptar</button>
+          
+        </div>
+        <div class="desencriptar">
+          <button class="btn" id="btn-desencriptar">Desencriptar</button>
+        </div>
+      </section>
+
+      <section class="section3">
+        
+          <div class="mensaje-error">
+            Solo letras minúsuclas y sin acentos
+          </div>
+          <div class="cuerpo-mensaje" id="msg">
+            Ingrese el texto que desees encriptar o desencriptar
+          </div>
+          <div class="btn-copiar">
+            <button class="btn" id="btn-copy">Copiar</button>
+          </div>
+        
+      </section>
+  </div>
+  
+
+  <script src="script.js"></script>
+</body>
+</html>
