@@ -133,6 +133,14 @@ header{
   color: var(--color-texto-azul);
 }
 
+footer{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  margin-top: 30px;
+}
+
 @media screen and (min-width: 768px){
     .wrapper{
       width: 768px;
@@ -149,6 +157,10 @@ header{
     .btn-copiar{
       align-self: center;
     }
+    footer{
+      flex-direction: row;
+      justify-content: center;
+    }
     
 }
 
@@ -159,7 +171,8 @@ header{
     display: grid;
     grid-template-areas: 'header header mensaje'
     'input input mensaje'
-    'botones botones mensaje';
+    'botones botones mensaje'
+    'footer footer footer';
     gap: 20px;
   }
 
@@ -180,6 +193,12 @@ header{
     max-width: 400px;
     grid-area: mensaje;
     justify-content: space-between; 
+  }
+
+  footer{
+    flex-direction: row;
+    justify-content: center;
+    grid-area: footer;
   }
   
 }
